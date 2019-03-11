@@ -29,3 +29,6 @@ SELECT tasks.t_name, tasks.slider_id , services.name from tasks
 INNER JOIN services ON services.slider_id = tasks.slider_id 
 INNER JOIN products ON products.slider_id = tasks.slider_id
 INNER JOIN news ON news.slider_id = tasks.slider_id
+
+
+Master
