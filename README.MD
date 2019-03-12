@@ -31,3 +31,4 @@ INNER JOIN products ON products.slider_id = tasks.slider_id
 INNER JOIN news ON news.slider_id = tasks.slider_id
 
 login page
+db.projects.aggregate([ {$lookup:{from:"reviews",localField:"slug",foreignField:"slug",as:"c2s"}}, {$unwind:"$c2s"}, {$match:{"c2s.count": {$lt: 2}}}, { $project : { _id : 1 } } ])
